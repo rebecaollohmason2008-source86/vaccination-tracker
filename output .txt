@@ -1,0 +1,66 @@
+
+============================================================
+1. Creating Vaccine objects (class method + constructor)
+============================================================
+Vaccine PENTA: Pentavalent
+  Doses required : 3
+  Schedule (days after dose 1): (0, 28, 56)
+Vaccine MEASLES: Measles
+  Doses required : 2
+  Schedule (days after dose 1): (0, 180)
+Vaccine YF: Yellow Fever
+  Doses required : 1
+  Schedule (days after dose 1): (0,)
+Vaccine objects created so far: 3
+Is 'A B' a valid code? False
+
+============================================================
+2. Registering anonymous recipients in the dictionary
+============================================================
+Total registered: 4
+Cannot add: ID R-0001 already exists.
+
+============================================================
+3. Recording doses (Recipient interacts with Vaccine)
+============================================================
+[OK]     R-0001: PENTA dose 1 of 3 recorded on 2026-01-05.
+[REJECT] R-0001: dose 2 of PENTA is too early (earliest 2026-02-02).
+[OK]     R-0001: PENTA dose 2 of 3 recorded on 2026-02-02.
+[OK]     R-0001: PENTA dose 3 of 3 recorded on 2026-03-02.
+[REJECT] R-0001: already completed PENTA.
+[OK]     R-0004: PENTA dose 1 of 3 recorded on 2026-01-15.
+[OK]     R-0002: MEASLES dose 1 of 2 recorded on 2026-02-01.
+[OK]     R-0002: YF dose 1 of 1 recorded on 2026-02-01.
+
+============================================================
+4. Updating a record
+============================================================
+R-0004 district is now: Kambia
+Validation works -> Age group must be one of ('infant', 'child', 'adolescent', 'adult').
+
+============================================================
+5. All records in the registry
+============================================================
+Recipient R-0001 | Infant | Western Area Urban
+  - PENTA dose 1 on 2026-01-05
+  - PENTA dose 2 on 2026-02-02
+  - PENTA dose 3 on 2026-03-02
+Recipient R-0002 | Child | Bo
+  - MEASLES dose 1 on 2026-02-01
+  - YF dose 1 on 2026-02-01
+Recipient R-0003 | Adult | Kenema
+  No doses recorded yet.
+Recipient R-0004 | Infant | Kambia
+  - PENTA dose 1 on 2026-01-15
+
+============================================================
+6. Coverage summary
+============================================================
+PENTA coverage: 1/4 fully vaccinated (25.0%)
+MEASLES coverage: 0/4 fully vaccinated (0.0%)
+YF coverage: 1/4 fully vaccinated (25.0%)
+
+============================================================
+7. Looking up a missing ID
+============================================================
+Result: No record found for R-9999.
